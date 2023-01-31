@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* resets */
+:root {
+    --inline-padding: 10px;
+    --bg-red: #e84949;
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #000000a9;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* utility classes */
+
+.container {
+    max-width: 1180px;
+    margin: auto;
+    padding: var(--inline-padding);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.red-btn {
+    padding: 15px 40px;
+    border: 3px solid var(--bg-red);
+    color: white;
+    position: relative;
+    z-index: 1;
+    box-shadow: 4px 4px 10px rgba(51, 51, 51, 0.514);
+    transition: color 0.8s;
+}
+
+.red-btn::before {
+    content: '';
+    background-color: var(--bg-red);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transform-origin: right;
+    transition: transform 0.8s;
+}
+
+.red-btn:hover {
+    color: black;
+}
+
+.red-btn:hover::before {
+    transform: scaleX(0);
+}
+
+.bottom-gap {
+    margin-bottom: 15px;
+}
+
+
+
+/* header */
+
+header {
+    padding: 10px var(--inline-padding) 0;
+}
+
+.header-container {
+    justify-content: space-between;
+    padding: 0 70px 0 15px;
+}
+
+.name {
+    width: 210px;
+    position: relative;
+}
+
+.name img {
+    width: 80px;
+}
+
+.name p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-44%, -50%);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.nav-links ul {
+    gap: 30px;
+}
+
+.hover-link {
+    color: #000000;
+    opacity: 70%;
+    font-size: 1.3rem;
+}
+
+
+/* hero section */
+/* hero section text */
+.hero-section {
+    padding: 50px var(--inline-padding) 0;
+}
+
+.hero-section-container {
+    justify-content: space-between;
+}
+
+.hero-section-text {
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+    width: 35vw;
+}
+
+.hero-section-text>p:nth-child(1) {
+    font-size: 2.2rem;
+    color: #343d68;
+    font-weight: 300;
+}
+
+
+.hero-section-text>p:nth-child(2) {
+    font-size: 2.8rem;
+    color: #343d68;
+}
+
+
+
+.hero-section-text>p:nth-child(3) {
+    font-size: 1rem;
+}
+
+/* hero section image */
+
+.hero-section-image {
+    position: relative;
+}
+
+.hero-section-image img:not(.icons) {
+    padding: 40px;
+    justify-content: center;
+    transform: all 0.8s;
+    animation: Zoom-in-out 2.5s infinite linear alternate;
+}
+
+.hero-section-image .icons {
+    position: absolute;
+    z-index: 1;
+}
+
+.hero-section-image .icons:nth-child(1) {
+    bottom: 0;
+    right: 0;
+    animation: up-down 4s infinite ease;
+}
+
+.hero-section-image .icons:nth-child(2) {
+    top: -5px;
+    right: 25px;
+    animation: cube-rotate 4s infinite ease;
+}
+
+.hero-section-image .icons:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    animation: circle 2.5s infinite linear alternate;
+}
+
+.hero-section-image .icons:nth-child(4) {
+    top: 0;
+    left: 0;
+    animation: right-left 4s infinite ease;
+}
+
+.hero-section-image .icons:nth-child(5) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: up-down 4s infinite ease;
+}
+
+/* icons animation */
+
+@keyframes Zoom-in-out {
+    from {
+        scale: 1;
+        filter: grayscale(100%);
+    }
+
+    to {
+        scale: 0.85;
+        box-shadow: 5px 5px 10px #333;
+    }
+}
+
+@keyframes cube-rotate {
+    0% {
+        transform: rotateY(0deg) translateY(-20%);
+    }
+
+    50% {
+        transform: rotateY(180deg) translateY(20%);
+    }
+
+    100% {
+        transform: rotateY(360deg) translateY(-20%);
+    }
+}
+
+@keyframes circle {
+
+    from {
+        transform: translate(100%, -100%);
+    }
+
+    to {
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(-10%);
+    }
+
+    50% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(-10%);
+    }
+
+}
+
+@keyframes right-left {
+    0% {
+        transform: translateX(-10%);
+    }
+
+    50% {
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(-10%);
+    }
+
+}
+
+/* projects section container*/
+
+.projects-section {
+    margin: 100px var(--inline-padding) 0;
+    background-color: #e7e7e7;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    color: var(--bg-red);
+    padding: 30px 0;
+}
+
+.projects-section-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 120px;
+}
+
+.project-card{
+    width: 1000px;
+    height: 500px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.836);
+}
+
+/* projects section 1,2 etc */
+
+.project-section-2,.project-section-4{
+    justify-self: right;
+}
+
+.project-section-1{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(assets/asset\ 30.png);
+    background-size: cover;
+}
+
+.project-section-2{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(assets/asset\ 29.png);
+    background-size: cover;
+}
+
+.project-section-3{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(assets/asset\ 31.png);
+    background-size: cover;
+}
+
+.project-section-4{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(assets/asset\ 32.png);
+    background-size: cover;
+}
+
+/* hover effect on project */
+
+.project-card{
+    position: relative;
+}
+
+.project-card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    transition: transform 0.4s;
+}
+
+.project-card:hover::before{
+    transform: scaleX(1);
+}
+
+.project-no{
+    font-size: 11rem;
+    color: white;
+    position: absolute;
+    opacity: 0;
+    z-index: 3;
+}
+
+.project-card:hover .project-no{
+    opacity: 1;
+}
+
+.project-section-1 .project-no,.project-section-3 .project-no{
+    right: -5%;
+    top: -10%;
+}
+
+.project-section-2 .project-no,.project-section-4 .project-no{
+    top: 0;
+    left: 0;
+    transform: translate(-15%,-25%);
+}
