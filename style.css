@@ -12,8 +12,12 @@
     --bg-red: #e84949;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     font-family: 'Be Vietnam Pro', sans-serif;
     color: #000000a9;
 }
@@ -115,6 +119,11 @@ header {
     color: #000000;
     opacity: 70%;
     font-size: 1.3rem;
+    transition: opacity 0.2s;
+}
+
+.hover-link:hover{
+    opacity: 100%;
 }
 
 
@@ -277,6 +286,7 @@ header {
 .projects-section {
     margin: 100px var(--inline-padding) 0;
     background-color: #e7e7e7;
+    padding-bottom: 50px;
 }
 
 h1 {
@@ -404,11 +414,10 @@ h1 {
     transform: translate(-15%, -25%);
 }
 
-/* project content left */
+/* project content */
 
 
 .project-content {
-    width: 80%;
     color: white;
     margin-left: 150px;
     flex-direction: column;
@@ -420,11 +429,9 @@ h1 {
 .project-content-images {
     flex-wrap: wrap;
     gap: 10px;
-    width: 50%;
 }
 
 .project-content-images>* {
-    width: 10%;
     height: 40px;
 }
 
@@ -436,7 +443,6 @@ h1 {
 .project-content p {
     font-size: 1rem;
     font-style: italic;
-    width: 60%;
 }
 
 .links {
@@ -451,6 +457,7 @@ h1 {
 .hover-red {
     /* height: 100%; */
     color: white;
+    transition: color 0.2s;
 }
 
 .hover-red:hover {
@@ -467,3 +474,182 @@ h1 {
     transform: scale(1.1);
 }
 
+/* project content postioning and directions */
+
+.project-content-1 .project-content-images{
+    width: 60%;
+}
+
+.project-content-1 p{
+    width: 70%;
+}
+
+.project-content-2{
+    margin-left: 400px;
+}
+
+.project-content-2 .project-content-images,.project-content-2 p{
+    width: 65%;
+}
+
+.project-content-3 p{
+    width: 70%;
+}
+
+.project-section-4{
+    justify-content: flex-end;
+}
+
+.project-content p{
+    width: 65%;
+}
+
+/* skills section */
+
+.skills-section{
+    padding: 200px var(--inline-padding) 200px;
+}
+
+.skills-section-container{
+    justify-content: space-between;
+}
+
+
+.skills-heading{
+    color: var(--bg-red);
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.skills-heading::first-letter{
+    font-size: 5rem;
+}
+
+.skills-desc{
+    font-size: 1rem;
+    font-weight: 400;
+    width: 85%;
+    text-align: justify;
+}
+
+.skills-image{
+    display: grid;
+    grid-template-columns: repeat(5,100px);
+    grid-auto-rows: 100px;
+    gap: 20px;
+    padding-top: 25px;
+    position: relative;
+}
+
+.skill-icon{
+    width: 90px;
+    justify-self: center;
+    align-self: center;
+    z-index: 1;
+    transition: transform 0.4s ease;
+}
+
+.skill-icon:hover{
+    transform: scale(1.2);
+}
+
+.bg-zig-zag{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: zig-zag 3s infinite linear;
+}
+
+@keyframes zig-zag {
+    0%{
+        transform: translate(-40%,-60%);
+    }
+    50%{
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        transform: translate(-40%,-60%);
+    }
+    
+}
+
+/* conatct form */
+
+.contact-form{
+    padding: 20px var(--inline-padding) 20px;
+    background-color: #e7e7e7;
+}
+
+.contact-heading{
+    font-size: 5rem;
+    color: var(--bg-red);
+    font-weight: 500;
+}
+
+.contact-sub-heading{
+    font-size: 3rem;
+    color: #343d68;
+    opacity: 66.7%;
+    font-weight: 500;
+}
+
+form{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+form p{
+    margin-block: 20px;
+}
+
+form p input,form p textarea{
+    width: 900px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #333;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+
+form .red-btn{
+    margin-top: 30px;
+    padding-inline: 50px;
+    font-size: 1.4rem;
+    font-weight: 100;
+    border: 0;
+    transition: scale 0.4s;
+}
+
+form .red-btn:hover{
+    scale: 0.9;
+}
+
+.fa-paper-plane{
+    margin-left: 8px;
+}
+
+/* footer */
+
+footer{
+    padding: 80px 40px;
+    background-color: #343d68;
+}
+
+.footer-container{
+    justify-content: space-between;
+}
+
+.footer-links{
+    font-size: 1.2rem   ;
+    gap: 15px;
+    font-weight: 300;
+}
+
+.social-media-links{
+    gap: 15px;
+}
