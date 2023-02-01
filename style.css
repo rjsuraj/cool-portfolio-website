@@ -43,6 +43,7 @@ li {
 .red-btn {
     padding: 15px 40px;
     border: 3px solid var(--bg-red);
+    background-color: white;
     color: white;
     position: relative;
     z-index: 1;
@@ -285,13 +286,13 @@ h1 {
     padding: 30px 0;
 }
 
-.projects-section-container{
+.projects-section-container {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 120px;
 }
 
-.project-card{
+.project-card {
     width: 1000px;
     height: 500px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.836);
@@ -299,54 +300,86 @@ h1 {
 
 /* projects section 1,2 etc */
 
-.project-section-2,.project-section-4{
+.project-section-2,
+.project-section-4 {
     justify-self: right;
 }
 
-.project-section-1{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(assets/asset\ 30.png);
+.project-section-1::after {
+    content: "";
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(assets/asset\ 29.png);
     background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
 }
 
-.project-section-2{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(assets/asset\ 29.png);
+.project-section-2::after {
+    content: "";
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(assets/asset\ 30.png);
     background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
 }
 
-.project-section-3{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(assets/asset\ 31.png);
+.project-section-3::after {
+    content: "";
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(assets/asset\ 31.png);
     background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
 }
 
-.project-section-4{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(assets/asset\ 32.png);
+.project-section-4::after {
+    content: "";
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(assets/asset\ 32.png);
     background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
 }
+
+
 
 /* hover effect on project */
 
-.project-card{
+.project-card {
     position: relative;
 }
 
-.project-card::before{
+.project-card::before {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 1;
     transform: scaleX(0);
     transform-origin: left;
     background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
     transition: transform 0.4s;
 }
 
-.project-card:hover::before{
+.project-card:hover::before {
     transform: scaleX(1);
 }
 
-.project-no{
+.project-no {
     font-size: 11rem;
     color: white;
     position: absolute;
@@ -354,17 +387,74 @@ h1 {
     z-index: 3;
 }
 
-.project-card:hover .project-no{
+.project-card:hover .project-no {
     opacity: 1;
 }
 
-.project-section-1 .project-no,.project-section-3 .project-no{
+.project-section-1 .project-no,
+.project-section-3 .project-no {
     right: -5%;
     top: -10%;
 }
 
-.project-section-2 .project-no,.project-section-4 .project-no{
+.project-section-2 .project-no,
+.project-section-4 .project-no {
     top: 0;
     left: 0;
-    transform: translate(-15%,-25%);
+    transform: translate(-15%, -25%);
 }
+
+/* project content left */
+
+
+.project-content-left {
+    width: 80%;
+    color: white;
+    margin-left: 150px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    z-index: 2;
+}
+
+.project-content-images {
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 50%;
+}
+
+.project-content-images>* {
+    width: 10%;
+    height: 40px;
+}
+
+.project-content-left h2 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.project-content-left p {
+    font-size: 1rem;
+    font-style: italic;
+    width: 60%;
+}
+
+.links {
+    gap: 15px;
+}
+
+.links .red-btn {
+    border: 0;
+    padding: 15px 35px;
+}
+
+.hover-red {
+    /* height: 100%; */
+    color: white;
+}
+
+.hover-red:hover {
+    color: var(--bg-red);
+}
+
+
