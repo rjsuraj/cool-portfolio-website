@@ -41,7 +41,7 @@
                 <p class="bottom-gap">Hi! Sanjay Mandal</p>
 
                 <!-- text animation -->
-                <p class="bottom-gap text">I am a Web Devloper</p>
+                <p class="bottom-gap text">I am a <span class="role">Web Devloper</span></p>
 
                 <p>I’m a software developer and here is my portfolio website. Here you’ll learn about my journey as a
                     software developer.</p>
@@ -328,8 +328,25 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <script src="https://kit.fontawesome.com/c6cc394991.js" crossorigin="anonymous"></script>
+
+    <script>
+    var typeData = new Typed(".role", {
+      strings: [
+        "Full Stack Developer",
+        "Web Developer",
+        "UI-UX Designer",
+        "Backend Developer",
+        "Coder",
+      ],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 80,
+      backDelay: 1000,
+    });
+  </script>
 </body>
 
 </html>
