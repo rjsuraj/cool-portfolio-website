@@ -98,8 +98,10 @@ header {
     position: relative;
 }
 
-.name img {
-    width: 80px;
+.user-logo {
+    width: 90px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.266));
+    cursor: pointer;
 }
 
 .name p {
@@ -142,7 +144,6 @@ header {
     gap: 25px;
     align-items: flex-start;
     width: 35vw;
-    text-align: center;
 }
 
 .hero-section-text>p:nth-child(1) {
@@ -210,6 +211,11 @@ header {
     left: 50%;
     transform: translateX(-50%);
     animation: up-down 4s infinite ease;
+}
+
+.user-image{
+    width: 360px;
+    height: 390px;
 }
 
 /* icons animation */
