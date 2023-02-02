@@ -1,0 +1,150 @@
+@media screen and (max-width : 1200px) {
+
+    .container {
+        overflow: hidden;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-section-container {
+        flex-direction: column;
+    }
+
+    .hero-section-text {
+        width: 100%;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+        height: 300px;
+    }
+
+    .project-content {
+        margin: 0;
+        scale: 0.6;
+    }
+}
+
+@media screen and (max-width : 478px) {
+
+    .hero-section-image {
+        scale: 0.6;
+    }
+
+
+    .projects-section {
+        margin: 0;
+    }
+
+    .projects-section-container {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .project-content {
+        scale: 0.4;
+    }
+
+    .project-card {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.836);
+    }
+
+
+    .project-content::after {
+        background-position: center;
+    }
+
+    .project-no {
+        font-size: 5rem;
+    }
+
+    .project-section-1 .project-no,
+    .project-section-3 .project-no {
+        right: 0;
+        top: -10%;
+    }
+
+    .project-section-2 .project-no,
+    .project-section-4 .project-no {
+        top: 0;
+        left: 0;
+        transform: translate(-8%, -25%);
+    }
+
+    .project-section-1 {
+        margin-top: 30px;
+    }
+
+    .project-section-4 {
+        margin-bottom: 30px;
+    }
+
+    .skills-section {
+        padding: 100px var(--inline-padding) 100px;
+    }
+
+    .skills-section {
+        padding: 0;
+    }
+
+    .skills-section-container {
+        flex-direction: column;
+    }
+
+    .skills-heading{
+        font-size: 2rem;
+    }
+
+    .skills-heading::first-letter{
+        font-size: 4rem;
+    }
+
+    .skills-left {
+        text-align: center;
+    }
+
+    .skills-desc {
+        width: 100%;
+    }
+
+    .skills-image {
+        scale: 0.5;
+        transform: translateY(-10%);
+    }
+
+    .contact-heading {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .contact-sub-heading {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    form {
+        margin: 0;
+    }
+
+    form p input,
+    form p textarea {
+        width: 100%;
+    }
+
+    form .red-btn {
+        width: 100%;
+    }
+
+    .footer-container {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-media-links {
+        gap: 25px;
+    }
+}

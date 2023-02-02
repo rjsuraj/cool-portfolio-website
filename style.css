@@ -142,6 +142,7 @@ header {
     gap: 25px;
     align-items: flex-start;
     width: 35vw;
+    text-align: center;
 }
 
 .hero-section-text>p:nth-child(1) {
@@ -641,6 +642,7 @@ footer{
 }
 
 .footer-container{
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
