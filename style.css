@@ -170,10 +170,13 @@ header {
     position: relative;
 }
 
-.hero-section-image img:not(.icons) {
+.user-image {
     padding: 40px;
     justify-content: center;
     transform: all 0.8s;
+    width: 360px;
+    height: 390px;
+    object-fit: cover;
     animation: Zoom-in-out 2.5s infinite linear alternate;
 }
 
@@ -213,10 +216,6 @@ header {
     animation: up-down 4s infinite ease;
 }
 
-.user-image{
-    width: 360px;
-    height: 390px;
-}
 
 /* icons animation */
 
